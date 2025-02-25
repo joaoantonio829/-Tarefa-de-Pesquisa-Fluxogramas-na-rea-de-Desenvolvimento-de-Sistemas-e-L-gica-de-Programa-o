@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Aluno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-25 04:47:05 "/>
+        <attribute name="created" value="QWx1bm87IERTTjkxNC1NSUNSTzMtTDsgMjAyNS0wMi0yNTsgMDM6NDg6NDMgOyAyNzE2"/>
+        <attribute name="edited" value="QWx1bm87IERTTjkxNC1NSUNSTzMtTDsgMjAyNS0wMi0yNTsgMDQ6NDc6MDUgOyAyNzE0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="EMAIL" type="String" array="False" size=""/>
+            <output expression="&quot;INFORME SEU EMAIL&quot;"/>
+            <input variable="EMAIL"/>
+            <declare name="NOME" type="String" array="False" size=""/>
+            <output expression="&quot;INFORME SEU NOME&quot;"/>
+            <input variable="NOME"/>
+            <declare name="SENHA" type="String" array="False" size=""/>
+            <output expression="&quot;INFORME SUA SENHA EM NUMEROS&quot;"/>
+            <input variable="senha"/>
+            <if expression="LEN(senha) &lt;6">
+                <then>
+                    <output expression="&quot;sua senha precisa ter mais que 6 caracteres&quot;"/>
+                    <breakpoint/>
+                </then>
+                <else>
+                    <output expression="&quot;ok&quot;"/>
+                </else>
+            </if>
+            <declare name="CONSENHA" type="String" array="False" size=""/>
+            <output expression="&quot;CONFIRME SUA SENHA&quot;"/>
+            <input variable="CONSENHA"/>
+            <if expression="SENHA==CONSENHA">
+                <then>
+                    <output expression="&quot;PARA PROSSEGUIR APERTE ENTER&quot;"/>
+                </then>
+                <else>
+                    <output expression="&quot;TENTE NOVAMENTE&quot;"/>
+                    <comment text="SO PERMITE APENAS UMA CHANCE DE ESCREVER A SENHA NOVAMENTE&#13;&#10;"/>
+                </else>
+            </if>
+            <input variable="SENHA"/>
+            <declare name="idade" type="Integer" array="False" size=""/>
+            <output expression="&quot;informe sua idade&quot;"/>
+            <input variable="idade"/>
+            <if expression="idade&gt;=18">
+                <then>
+                    <output expression="&quot;CADASTRO VALIDO&quot;"/>
+                </then>
+                <else>
+                    <output expression="&quot;VAI BRINCA MENINO VC E NOVO&quot;"/>
+                    <breakpoint/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
